@@ -31,6 +31,7 @@ yarn-error.log*
 dev-server*.log
 vinext*.log
 v2-dev*.log
+v3-dev*.log
 *-sites.tar.gz
 
 # env files (can opt-in for committing if needed)

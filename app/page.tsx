@@ -16,6 +16,19 @@ type Category = {
   };
 };
 
+type DetailSection = {
+  heading?: string;
+  paragraphs?: string[];
+  items?: string[];
+};
+
+type DetailContent = {
+  number?: string;
+  kicker: string;
+  title: string;
+  sections: DetailSection[];
+};
+
 const categories: Category[] = [
   {
     id: "01",
@@ -120,6 +133,241 @@ const utilityCategories = [
   { id: "10", name: "Contact" },
 ];
 
+const detailContent: Record<string, DetailContent> = {
+  "01": {
+    number: "01",
+    kicker: "More content = less meaning",
+    title: "Bla Blaa Blaa",
+    sections: [
+      {
+        paragraphs: [
+          "Schneeweisse Yoshi-Skulpturen hängen an der Wand. Aus ihren Mündern quellen endlose Papierstreifen, fallen zu Boden und wachsen dort zu einem weissen Berg: produziert, verbreitet, vergessen.",
+          "Bla Blaa Blaa erinnert an die Wasserspiele barocker Gärten, in denen Brunnen zu Bildern von Überfluss, Macht und Inszenierung wurden. Bei Yoshi + Moshi fliesst kein Wasser mehr, sondern Content. Ein unaufhörlicher Strom von Information, der immer grösser wird und dabei immer weniger zu sagen scheint.",
+          "Schon Flaubert beschäftigte die absurde Fülle menschlichen Wissens. In Bouvard et Pécuchet sammeln, kopieren und ordnen seine beiden Protagonisten unermüdlich Wissen und verlieren sich gerade darin. Bei Yoshi + Moshi wird dieser Widerspruch zum räumlichen Bild: Die Produktion hört nie auf, der Papierberg wächst, doch die Bedeutung verflüchtigt sich. Yoshi + Moshi sagen nichts: Sie produzieren weiter.",
+        ],
+      },
+    ],
+  },
+  "02": {
+    number: "02",
+    kicker: "No movement = no legend",
+    title: "Dance Dolls",
+    sections: [
+      {
+        paragraphs: [
+          "Die Dance Dolls drehen sich, taumeln, tanzen, verlieren das Gleichgewicht und finden ein neues. Stillstehen können sie offenbar nicht besonders gut.",
+          "Seit Jahrhunderten steht der tanzende Körper in der Kunst für Freiheit, Ekstase und Verwandlung. Von den kreisenden Figuren Matisses bis zum modernen Tanz erzählt Bewegung immer auch von Veränderung.",
+          "Yoshi + Moshi nehmen das ziemlich wörtlich. Ihre Dance Dolls warten nicht auf den richtigen Moment, bessere Umstände oder einen perfekten Plan. Sie bewegen sich einfach. Denn jede Legende beginnt mit einer Vorstellung, nur leider reicht die Vorstellung allein nicht. Irgendwann muss man vom Sofa aufstehen.",
+        ],
+      },
+    ],
+  },
+  "03": {
+    number: "03",
+    kicker: "Big ego = big legend",
+    title: "Yoshini + Moshini",
+    sections: [
+      {
+        paragraphs: [
+          "Yoshi + Moshi haben es geschafft: Sie sind Superhelden. Und weil das offenbar noch nicht reicht, erschaffen sie sich auch noch ihr eigenes Ebenbild.",
+          "Mit Yoshini + Moshini treiben sie die Lust am eigenen Spiegelbild ins Absurde. Wie Narziss betrachten Yoshi + Moshi sich selbst, nur dass ihnen das Betrachten nicht genügt. Sie vervielfältigen sich, spielen mit sich selbst und werden zum Publikum ihrer eigenen Legende. Doch Yoshini + Moshini sind zugleich Stockpuppen. Yoshi + Moshi bewegen sie, inszenieren sie und spielen mit ihnen. Eigentlich ist klar, wer hier die Fäden in der Hand hat – aber nur eigentlich.",
+          "Und dann ist da dieses kleine Holzskelett. Keine Superkraft, keine Pose, kein Heldentum. Nur ein einfaches Gerüst, aus dem jedes mögliche Selbst entstehen kann.",
+          "Vielleicht beginnt jede Legende genau dort: mit einem einfachen Gerüst und einer ziemlich grossen Vorstellung von sich selbst.",
+        ],
+      },
+    ],
+  },
+  "04": {
+    number: "04",
+    kicker: "Less me = more us",
+    title: "Das Ensemble",
+    sections: [
+      {
+        paragraphs: [
+          "Alle wollen Hauptdarsteller*innen sein, nur hier nicht.",
+          "Das Ensemble bringt Stockpuppen-Skulpturen auf einer gemeinsamen Bühne zusammen. Keine beansprucht das Zentrum für sich. Sie begegnen sich, reagieren aufeinander, bilden Gruppen, lösen sich wieder und schaffen ein Gefüge, das nur durch ihr Zusammenspiel existiert. Das Theater kennt diese Kraft seit seinen Anfängen: vom Chor der griechischen Tragödie bis zum modernen Ensembletheater. Bedeutung entsteht nicht allein durch den Protagonisten, sondern zwischen den Figuren – durch Nähe und Distanz, Zusammenspiel und Konflikt, durch Führen und Geführtwerden.",
+          "Das Ensemble setzt dem Narzissmus des Einzelnen die Kraft des Kollektivs entgegen. Die Stockpuppe, eigentlich Sinnbild des Geführtwerdens, wird dabei Teil eines gemeinsamen Spiels. Nicht das einzelne Ich bestimmt das Geschehen, sondern die Beziehungen zwischen vielen. Auch Legenden entstehen nicht allein. Sie brauchen Gegenüber, Mitspieler, Reibung und Resonanz.",
+        ],
+      },
+    ],
+  },
+  "05": {
+    number: "05",
+    kicker: "No audience = no story",
+    title: "Das Publikum",
+    sections: [
+      {
+        paragraphs: [
+          "Eine Legende ohne Publikum hat ein Problem: Niemand kann davon erzählen.",
+          "Das Publikum besteht aus einäugigen Wesen auf Rädern. Zu schauen und sich zu bewegen gehören zu ihrer Natur. Sie wechseln die Perspektive, kommen näher, entfernen sich wieder – und sehen, wie wir alle, immer nur einen Teil des Ganzen. Im Theater kann die grösste Vorstellung stattfinden: Ohne Publikum bleibt sie eine private Angelegenheit. Auch Legenden brauchen Menschen, die sie sehen, sich an sie erinnern und ihre Geschichten weitererzählen. Und das eine Auge reicht dafür offenbar völlig aus. Mit zwei Augen wäre die Wahrheit schliesslich auch nicht garantiert. Yoshi + Moshi sind Legenden. Das Publikum entscheidet nicht darüber, aber ohne Publikum wüsste es niemand.",
+        ],
+      },
+    ],
+  },
+  "06": {
+    number: "06",
+    kicker: "You look = they look",
+    title: "Die 4. Wand",
+    sections: [
+      {
+        paragraphs: [
+          "Wer schaut hier eigentlich wem zu?",
+          "Im Theater trennt die unsichtbare vierte Wand Bühne und Publikum, Spiel und Wirklichkeit. Die 4. Wand dreht dieses Prinzip um. In der Projektion blicken die Big Heads auf die Installation – und plötzlich werden aus den Betrachteten selbst Betrachter. Damit geraten die Rollen völlig durcheinander. Sind Yoshi + Moshi die Protagonisten? Die Big Heads? Oder die Menschen im Raum, die ihrerseits beobachtet werden, während sie beobachten? Alle paar Minuten verändert sich das Bild radikal. Die Big Heads verschwinden und Yoshi + Moshi erscheinen. Fast wie ein Deus-ex-machina-Moment treten sie unvermittelt in das Geschehen ein, übernehmen für einen Moment die Bühne und verschwinden wieder. Danach kehren die anderen achtzehn Big Heads zurück und schauen weiter dem Treiben zu. Die vierte Wand trennt hier nicht mehr zwei Welten. Sie verbindet sie. Bühne und Zuschauerraum, Kunstwerk und Publikum, Beobachten und Beobachtetwerden beginnen sich gegenseitig zu spiegeln.",
+        ],
+      },
+    ],
+  },
+  "07": {
+    number: "07",
+    kicker: "No words = full story",
+    title: "Filme & Performances",
+    sections: [
+      {
+        paragraphs: [
+          "Yoshi + Moshi können nicht sprechen. Zum Glück können sie alles andere. In ihren Filmen und Performances wird die Welt zu ihrer Bühne. Sie reisen, begegnen Menschen, geraten in unmögliche Situationen, spielen, wiederholen, scheitern, verschwinden und tauchen wieder auf. Sie erklären nichts. Sie sind einfach da und überlassen den Rest unserer Fantasie. Damit stehen Yoshi + Moshi in einer langen Tradition von Performance, Theater und Film, in der Körper, Geste und Handlung mehr erzählen können als Worte. Zugleich erinnern sie an die grossen komischen Paare der Filmgeschichte: Zwei Figuren, eine Welt und genügend Möglichkeiten für Missverständnisse. Was Inszenierung ist und was Wirklichkeit, verliert dabei zunehmend an Bedeutung. Denn Yoshi + Moshi spielen keine Legenden: Sie leben ihre eigene.",
+        ],
+      },
+    ],
+  },
+  "08": {
+    number: "08",
+    kicker: "No words = more worlds",
+    title: "Become a Legend",
+    sections: [
+      {
+        paragraphs: [
+          "BECOME A LEGEND ist die erste grosse Kunstinstallation von Yoshi + Moshi. Skulptur, Malerei, Film, Performance und Puppenspiel verschmelzen zu einem begehbaren Kosmos, in dem die beiden tun, was Legenden eben tun: Sie erschaffen ihre eigene Realität.",
+          "Yoshi + Moshi sprechen nicht und sie erklären rein gar nichts. Und gerade darin liegt ihre Freiheit. Ihre Welt entsteht aus Blicken, Gesten, Bewegung, Begegnung und Spiel. Bedeutung wird nicht vorgegeben, sondern entsteht im Kopf des Publikums. Wer Yoshi + Moshi begegnet, wird unweigerlich zum Mitautor ihrer Geschichte.",
+          "Das macht ihre Welt heute erstaunlich aktuell. Wir leben in einer Zeit permanenter Sichtbarkeit und Selbstdarstellung. Wir produzieren, kommentieren, teilen und inszenieren uns unablässig. Jeder kann Sender, Darsteller und Publikum seiner eigenen Wirklichkeit zugleich sein. Mehr Bilder, mehr Worte, mehr Content – und immer die Frage, was davon bleibt.",
+          "Mitten in diesem Strom brauchen Yoshi + Moshi keine Worte. Sie schauen, staunen, spielen. Und sie bleiben analog.",
+          "Ihre Welt ist von Hand gemacht: Stoff, Holz, Papier, Farbe, Körper und Bewegung besitzen Gewicht, Oberfläche und Widerstand. Das Analoge ist dabei keine nostalgische Flucht aus der digitalen Gegenwart. Es erinnert an etwas, das sich nicht vollständig übertragen oder reproduzieren lässt: Berührung, Präsenz und die unmittelbare Erfahrung eines Gegenübers.",
+          "Poetisch, absurd und mit feinem Humor setzen Yoshi + Moshi der permanenten Sinnproduktion etwas erstaunlich Einfaches entgegen: ihre eigene Vorstellungskraft. Sie stellen unseren Wunsch auf die Probe, mehr zu sein als das, was wir bereits sind, und drehen dabei die Idee der Legende um. Eine Legende muss weder berühmt noch perfekt sein. Sie beginnt dort, wo wir der eigenen Wahrnehmung vertrauen, Möglichkeiten zulassen und den Mut haben, unsere Wirklichkeit selbst zu gestalten.",
+          "Yoshi + Moshi haben ihre Realität längst erschaffen. BECOME A LEGEND ist ihre Einladung an uns.",
+        ],
+      },
+      {
+        heading: "Literarische Bezüge",
+        items: [
+          "Gustave Flaubert",
+          "Jorge Luis Borges",
+          "Roland Barthes",
+          "Samuel Beckett",
+          "Ludwig Wittgenstein",
+          "Maurice Blanchot",
+        ],
+      },
+      {
+        heading: "Nina Staehlis Beziehung zu Yoshi + Moshi",
+      },
+      {
+        heading: "Erste Begegnung",
+        paragraphs: [
+          "2012 erschienen Yoshi + Moshi zum ersten Mal in meinem Atelier. Damals wusste ich nicht, dass sie eines Tages ihre eigene Geschichte schreiben würden. Ich wusste nicht einmal, wer sie waren. Ich wusste nur, dass sie da waren. Sie gehörten zu den ersten Big Heads. Zu jenen Wesen, die weder Mensch noch Figur, weder Maske noch Porträt sind. Sie waren einfach anwesend. Mit grossen Augen und offenen Mündern. Mit einem Blick, als wäre gerade eben etwas geschehen. Bis heute glaube ich, dass genau darin ihr Ursprung liegt. Yoshi + Moshi staunen nicht über etwas Bestimmtes. Sie staunen über die Welt selbst. Lange bevor wir Begriffe finden, Urteile fällen oder Antworten formulieren, staunen wir. Vielleicht beginnt jede Erkenntnis genau dort. Mich interessiert dieses Staunen bis heute mehr als jede Gewissheit.",
+        ],
+      },
+      {
+        heading: "Stille Sprache",
+        paragraphs: [
+          "Deshalb sprechen Yoshi + Moshi nicht. Nicht, weil sie schweigen möchten. Nicht, weil sie Sprache verweigern würden. Sprache gehört schlicht nicht zu ihrer Existenz. Sie brauchen keine Worte, weil sie aus einem anderen Raum kommen. Ihre Welt entsteht aus Blicken, Gesten, Materialien, Berührungen, Bewegungen und Atmosphären. Das Schweigen ist keine Leerstelle, sondern ihre Sprache. In einer Zeit, in der beinahe alles erklärt, kommentiert und interpretiert wird, interessieren mich Räume, die offen bleiben. Räume, in denen Bedeutung nicht geliefert wird, sondern entsteht. Yoshi + Moshi erzählen deshalb keine Geschichten. Sie eröffnen Möglichkeiten und so wird der/die Betrachter*in zum/zur Mitautor*in. Vielleicht liegt genau darin ihre Nähe zur Literatur. Nicht zu Geschichten mit Anfang und Ende, sondern zu jener Literatur, die mehr fragt als antwortet. Flaubert träumte von einem Buch, das allein durch seine innere Kraft bestehen könnte. Beckett führte seine Figuren an die Grenze des Sagbaren. Wittgenstein erinnerte daran, dass dort, wo Sprache endet, nicht das Denken endet, und Roland Barthes verstand das Werk erst im Blick seines Lesers als vollendet. Diese Gedanken begleiten mich seit vielen Jahren als stille Weggefährten. Yoshi + Moshi erklären keine Philosophie, sie zitieren keine Literatur, aber sie bewegen sich in denselben Zwischenräumen. Genau dort, wo Sprache endet und Erfahrungen beginnen.",
+        ],
+      },
+      {
+        heading: "Poetische Räume",
+        paragraphs: [
+          "Mich interessiert seit jeher das Poetische. Nicht nur als literarische Gattung, sondern als Form des Wahrnehmens. Poesie beginnt dort, wo die Welt wieder geheimnisvoll wird. Dort, wo wir Dinge nicht sofort benennen müssen. Wo wir bereit sind, etwas auszuhalten, das sich unserer Kontrolle entzieht. Vielleicht ist genau das heute wichtiger denn je. Wir leben in einer Zeit, in der Wissen unendlich verfügbar scheint. Das grosse Versprechen auf Erkenntnis hat sich von den Büchern zunehmend auf die künstliche Intelligenz verlagert. Oft entsteht der Eindruck, Maschinen könnten eines Tages alles verstehen und für uns lösen. Künstliche Intelligenz ersetzt den Menschen nicht, sie verschiebt Kompetenzen, Wissen und Verantwortung. Gerade deshalb erscheint mir das Analoge heute nicht als nostalgische Gegenbewegung, sondern als Erinnerung an etwas, das niemals vollständig digital werden kann: Berührung, Material, Haptik, Zeit, Präsenz und Gewicht. Oder anders gesagt: die Aura eines Gegenübers. Yoshi + Moshi und ihr Kosmos sind ausnahmslos analog entstanden. Jede Puppe, Skulptur, Malerei und Oberfläche trägt Spuren von Händen. Kleine Unregelmässigkeiten, Widerstände und Zufälle. Alles, was sich einer vollkommenen Glättung entzieht und einer Schönheit, die sich nicht vollständig übersetzen lässt.",
+        ],
+      },
+      {
+        heading: "Offene Welten",
+        paragraphs: [
+          "Vielleicht haben wir in den letzten zwanzig Jahren unzählige Bäume auf Bildschirmen betrachtet und gleichzeitig vergessen, wie sich eine Baumrinde anfühlt und wie sie riecht. Yoshi + Moshi erinnern deshalb nicht an eine Vergangenheit, sondern an sinnliche Erfahrungen. Ihre Welt besteht aus Puppen, Skulpturen, Videos, Performances und Malereien. Auch das ist kein Zufall. Kinder entdecken die Welt spielend. Sie erschaffen Figuren, geben ihnen Stimmen, lassen sie sterben, wiederauferstehen und neue Welten bauen. Im Spiel entstehen Identitäten und Legenden. Yoshi + Moshi bauen sich selbst nach. Sie erschaffen Abbilder ihrer eigenen Existenz und sie spielen mit sich selbst. Mich interessiert dieser Moment, weil er gleichzeitig zutiefst menschlich und absurd ist. Das Spiel wird zum Spiegel unserer Gegenwart. Einer Zeit, die sich unablässig selbst betrachtet, dokumentiert und neu erfindet. Yoshi + Moshi beobachten diese Welt mit Zärtlichkeit und feiner Ironie.",
+        ],
+      },
+      {
+        heading: "Eigene Legenden",
+        paragraphs: [
+          "Über die Jahre haben Yoshi und Moshi begonnen, sich von mir zu lösen. Anfangs habe ich sie erschaffen und heute habe ich manchmal das Gefühl, dass sie mich erschaffen haben. Sie entwickelten ihre eigene Mythologie, eigene Regeln und Rituale. So als hätte ich ihnen irgendwann die Tür geöffnet und sie wären einfach hinausgegangen. Heute reisen sie als Künstler, Performer und Puppenspieler durch die Welt. Sie behaupten nicht, Legenden werden zu wollen – sie verkörpern diese bereits. Deshalb trägt diese Ausstellung den Titel Become A Legend; die Aufforderung richtet sich nicht an Yoshi + Moshi, sondern an uns Menschen. Im Zentrum der Installation steht nicht Ruhm, sondern die Wahrnehmung. Sie eröffnet einen Raum für Staunen, Spiel und die Bereitschaft, dem eigenen Blick zu vertrauen und sich berühren zu lassen.",
+        ],
+      },
+    ],
+  },
+  finances: {
+    kicker: "Big vision = shared costs",
+    title: "Finanzierung",
+    sections: [
+      {
+        paragraphs: [
+          "Yoshi + Moshi verfügen in der Schweiz über ein Netzwerk zu Kantonen, Städten und Kulturstiftungen. Dadurch wird ein substanzieller Teil von BECOME A LEGEND aus der Schweiz mitfinanziert werden.",
+          "Mitfinanzierungen umfassen:",
+        ],
+        items: [
+          "Produktion der Kunstwerke",
+          "Skulpturen und Installationen",
+          "Film und Video",
+          "Transportkosten der Installation",
+          "Reise und Übernachtung des Yoshi + Moshi Teams",
+          "Verpflegung des Teams",
+        ],
+      },
+      {
+        paragraphs: [
+          "So entsteht BECOME A LEGEND auch finanziell als gemeinsames Projekt zwischen Yoshi + Moshi und dem gastgebenden Kunsthaus.",
+        ],
+      },
+    ],
+  },
+  inventory: {
+    kicker: "Become a Legend / Inventory",
+    title: "Inventar",
+    sections: [
+      {
+        heading: "Skulpturen",
+        items: [
+          "Yoshini & Moshini",
+          "Ensemble-Skulpturen",
+          "Publikum auf Rädern",
+          "Dance Dolls",
+          "Bla Blaa Blaa-Installation",
+          "+/- 50 Skulpturen",
+          "Videos +/- 15",
+          "4. Wand: 1 Projektion",
+          "Yoshi + Moshi Malerei: in Entwicklung",
+        ],
+      },
+    ],
+  },
+  contacts: {
+    kicker: "Yoshi + Moshi / Team",
+    title: "Contacts",
+    sections: [
+      {
+        heading: "Yoshi + Moshi artists",
+        paragraphs: [
+          "Via Industria 21\n6850 Mendrisio\nSwitzerland\n\nyoshi-moshi@yoshi-moshi.com\nwww.yoshi-moshi.com",
+        ],
+      },
+      {
+        heading: "Nina Staehli",
+        paragraphs: [
+          "Idea, concept, creation, videos, sculptures, paintings, photography",
+        ],
+      },
+      {
+        heading: "Michel Kiwic",
+        paragraphs: ["Animation, film editing, sound, website"],
+      },
+      {
+        heading: "Daniel Hunziker",
+        paragraphs: ["Scenography"],
+      },
+      {
+        heading: "Walter Willimann",
+        paragraphs: ["Studio Organizer, logistics, finances"],
+      },
+    ],
+  },
+};
+
 export default function Home() {
   const [entryStage, setEntryStage] = useState<0 | 1 | 2>(0);
   const hasEntered = entryStage === 2;
@@ -130,6 +378,7 @@ export default function Home() {
   const detailExitTimer = useRef<number | null>(null);
   const activeCategory = categories.find((category) => category.id === activeId);
   const detailCategory = categories.find((category) => category.id === detailId);
+  const activeDetailContent = detailId ? detailContent[detailId] : null;
 
   const showDetail = (id: string) => {
     if (detailExitTimer.current !== null) {
@@ -237,18 +486,17 @@ export default function Home() {
       inert={!hasEntered}
     >
       <header className="masthead">
-        <a
+        <button
           className="wordmark"
-          href="/"
+          type="button"
           aria-label="Yoshi und Moshi – zum Ausstellungsmodell"
-          onClick={(event) => {
-            event.preventDefault();
+          onClick={() => {
             window.location.assign(window.location.pathname);
           }}
         >
           <span className="wordmark-main">YOSHI<span>+</span>MOSHI</span>
           <span className="wordmark-subtitle">Become a Legend</span>
-        </a>
+        </button>
       </header>
 
       <section className="model-section" id="model" aria-label="Interactive exhibition model">
@@ -306,9 +554,15 @@ export default function Home() {
               </button>
               {utilityCategories.map((category) => (
                 <a
-                  href={`#${category.name.toLowerCase()}`}
+                  href={category.name === "Contact" ? "#model" : `#${category.name.toLowerCase()}`}
                   key={category.id}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(event) => {
+                    setMenuOpen(false);
+                    if (category.name === "Contact") {
+                      event.preventDefault();
+                      showDetail("contacts");
+                    }
+                  }}
                 >
                   <span>{category.id}</span>
                   <strong>{category.name}</strong>
@@ -316,34 +570,58 @@ export default function Home() {
               ))}
             </nav>
 
-        {detailCategory ? (
+        {activeDetailContent ? (
           <div className={`category-transition${isDetailOpen ? " is-detail-open" : ""}`}>
             <div className="model-transition-panel" aria-hidden="true">
               <img src="yoshi-moshi-model.jpg" alt="" draggable={false} />
             </div>
-          <article
-            className={`category-detail category-detail-${detailCategory.id}`}
+          <div
+            className={`category-detail category-detail-${detailId}${detailCategory ? "" : " category-detail-information"}`}
             aria-labelledby="category-detail-title"
-            key={detailCategory.id}
+            key={detailId}
+            role="button"
+            tabIndex={0}
             onClick={returnToModel}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                returnToModel();
+              }
+            }}
           >
             <div className="detail-copy">
-              <span className="detail-number">{detailCategory.id}</span>
-              <p className="detail-kicker">Become a Legend / Category</p>
-              <h1 id="category-detail-title">{detailCategory.name}</h1>
-              <p className="detail-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
+              {activeDetailContent.number ? (
+                <span className="detail-number">{activeDetailContent.number}</span>
+              ) : null}
+              <p className="detail-kicker">{activeDetailContent.kicker}</p>
+              <h1 id="category-detail-title">{activeDetailContent.title}</h1>
+              <div className="detail-text">
+                {activeDetailContent.sections.map((section, sectionIndex) => (
+                  <section className="detail-text-section" key={`${detailId}-section-${sectionIndex}`}>
+                    {section.heading ? <h2>{section.heading}</h2> : null}
+                    {section.paragraphs?.map((paragraph, paragraphIndex) => (
+                      <p key={`${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>{paragraph}</p>
+                    ))}
+                    {section.items ? (
+                      <ul>
+                        {section.items.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </section>
+                ))}
+              </div>
             </div>
 
-            <img
-              className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`}
-              src={detailCategory.detailSrc}
-              alt={`Figur der Kategorie ${detailCategory.name}`}
-              draggable={false}
-            />
+            {detailCategory ? (
+              <img
+                className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`}
+                src={detailCategory.detailSrc}
+                alt={`Figur der Kategorie ${detailCategory.name}`}
+                draggable={false}
+              />
+            ) : null}
 
             <button
               className="detail-back"
@@ -355,7 +633,7 @@ export default function Home() {
             >
               <span aria-hidden="true">←</span> Back to model
             </button>
-          </article>
+          </div>
           </div>
         ) : (
         <div
@@ -373,13 +651,25 @@ export default function Home() {
             <span className="funded-button-face">Fully funded!</span>
           </span>
 
-          <button className="model-footer-action model-footer-finances" type="button">
+          <button
+            className="model-footer-action model-footer-finances"
+            type="button"
+            onClick={() => showDetail("finances")}
+          >
             Finances
           </button>
-          <button className="model-footer-action model-footer-inventory" type="button">
+          <button
+            className="model-footer-action model-footer-inventory"
+            type="button"
+            onClick={() => showDetail("inventory")}
+          >
             Inventar
           </button>
-          <button className="model-footer-action model-footer-contacts" type="button">
+          <button
+            className="model-footer-action model-footer-contacts"
+            type="button"
+            onClick={() => showDetail("contacts")}
+          >
             Contacts
           </button>
 
