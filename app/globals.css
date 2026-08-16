@@ -964,6 +964,21 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.detail-copy h1.detail-primary-title-pair {
+  display: grid;
+  justify-items: start;
+}
+
+.detail-primary-title-pair > span {
+  display: block;
+}
+
+.detail-primary-title-pair .detail-title-plus {
+  justify-self: center;
+  padding-right: 0.075em;
+  line-height: 0.72;
+}
+
 .detail-kicker {
   margin: 1.1rem 0 0.35rem;
   font-size: clamp(0.46rem, 0.72vw, 0.72rem);

@@ -610,8 +610,17 @@ export default function Home() {
               <>
                 <div className="detail-copy">
                   {activeDetailContent.number ? (
-                    <h1 className="detail-primary-title" id="category-detail-title">
-                      {activeDetailContent.title}
+                    <h1
+                      className={`detail-primary-title${detailId === "03" ? " detail-primary-title-pair" : ""}`}
+                      id="category-detail-title"
+                    >
+                      {detailId === "03" ? (
+                        <>
+                          <span>Yoshini</span>
+                          <span className="detail-title-plus">+</span>
+                          <span>Moshini</span>
+                        </>
+                      ) : activeDetailContent.title}
                     </h1>
                   ) : null}
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
