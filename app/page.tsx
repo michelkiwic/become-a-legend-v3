@@ -551,17 +551,6 @@ export default function Home() {
                   <strong>{category.name}</strong>
                 </a>
               ))}
-              <button
-                type="button"
-                onClick={() => {
-                  setMenuOpen(false);
-                  setActiveId(null);
-                  setDetailId(null);
-                  setEntryStage(0);
-                }}
-              >
-                Replay intro
-              </button>
               {utilityCategories.map((category) => (
                 <a
                   href="#model"
