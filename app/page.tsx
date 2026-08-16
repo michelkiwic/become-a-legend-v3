@@ -10,6 +10,7 @@ type Category = {
   hitOutline?: string;
   frameOutline?: string;
   detailSrc: string;
+  backgroundSrc?: string;
   closeup?: {
     src: string;
     alt: string;
@@ -70,7 +71,8 @@ const categories: Category[] = [
     id: "04",
     name: "DAS ENSEMBLE",
     point: { x: 74, y: 66.6 },
-    detailSrc: "ensemble-background.jpg",
+    detailSrc: "closeup-u4-white.webp",
+    backgroundSrc: "ensemble-background.jpg",
     closeup: {
       src: "closeup-u4-white.webp",
       alt: "Close-up of a seated black Performer holding a pale wooden figure",
@@ -87,6 +89,7 @@ const categories: Category[] = [
     name: "DAS PUBLIKUM",
     point: { x: 61.2, y: 69.4 },
     detailSrc: "closeup-u5-white.webp",
+    backgroundSrc: "audience-background.webp",
     closeup: {
       src: "closeup-u5-white.webp",
       alt: "Close-up of a suspended pale wooden rebel with black and silver costume",
@@ -636,28 +639,20 @@ export default function Home() {
 
                 {detailCategory ? (
                   <>
-                    <img
-                      className={
-                        detailCategory.id === "04"
-                          ? "detail-background"
-                          : `detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`
-                      }
-                      src={detailCategory.detailSrc}
-                      alt={
-                        detailCategory.id === "04"
-                          ? "Figuren des Ensembles"
-                          : `Figur der Kategorie ${detailCategory.name}`
-                      }
-                      draggable={false}
-                    />
-                    {detailCategory.id === "04" ? (
+                    {detailCategory.backgroundSrc ? (
                       <img
-                        className="detail-cutout detail-cutout-white detail-ensemble-cutout"
-                        src={detailCategory.closeup.src}
-                        alt={detailCategory.closeup.alt}
+                        className="detail-background"
+                        src={detailCategory.backgroundSrc}
+                        alt={`Figuren der Kategorie ${detailCategory.name}`}
                         draggable={false}
                       />
                     ) : null}
+                    <img
+                      className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}${detailCategory.backgroundSrc ? " detail-layered-cutout" : ""}`}
+                      src={detailCategory.detailSrc}
+                      alt={detailCategory.closeup?.alt ?? `Figur der Kategorie ${detailCategory.name}`}
+                      draggable={false}
+                    />
                   </>
                 ) : null}
               </>

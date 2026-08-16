@@ -1077,10 +1077,18 @@ a:focus-visible {
   font-size: clamp(2.4rem, 5vw, 5.8rem);
 }
 
-.category-detail-04 .detail-ensemble-cutout {
+.category-detail-04 .detail-layered-cutout {
   z-index: 2;
   right: -2%;
   bottom: -13%;
+  height: 108%;
+  opacity: 0.72;
+}
+
+.category-detail-05 .detail-layered-cutout {
+  z-index: 2;
+  right: 1%;
+  bottom: -12%;
   height: 108%;
   opacity: 0.72;
 }
@@ -2002,10 +2010,16 @@ a:focus-visible {
     width: 82%;
   }
 
-  .category-detail-04 .detail-ensemble-cutout {
+  .category-detail-04 .detail-layered-cutout {
     right: -20%;
     bottom: -4%;
     height: 68%;
+  }
+
+  .category-detail-05 .detail-layered-cutout {
+    right: -18%;
+    bottom: -5%;
+    height: 70%;
   }
 
   .detail-copy h1.detail-primary-title {
