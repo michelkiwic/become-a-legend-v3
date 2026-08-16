@@ -1029,6 +1029,10 @@ a:focus-visible {
   max-height: 84%;
 }
 
+.category-detail-information .detail-copy h1 {
+  color: var(--rebel-pink);
+}
+
 .detail-cutout {
   position: absolute;
   z-index: 2;
