@@ -614,10 +614,14 @@ export default function Home() {
               <>
                 <div className="detail-copy">
                   {activeDetailContent.number ? (
-                    <span className="detail-number">{activeDetailContent.number}</span>
+                    <h1 className="detail-primary-title" id="category-detail-title">
+                      {activeDetailContent.title}
+                    </h1>
                   ) : null}
                   <p className="detail-kicker">{activeDetailContent.kicker}</p>
-                  <h1 id="category-detail-title">{activeDetailContent.title}</h1>
+                  {!activeDetailContent.number ? (
+                    <h1 id="category-detail-title">{activeDetailContent.title}</h1>
+                  ) : null}
                   <div className="detail-text">
                     {activeDetailContent.sections.map((section, sectionIndex) => (
                       <section className="detail-text-section" key={`${detailId}-section-${sectionIndex}`}>
