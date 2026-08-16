@@ -1067,6 +1067,22 @@ a:focus-visible {
   user-select: none;
 }
 
+.category-detail-04 .detail-copy {
+  width: min(52%, 640px);
+}
+
+.category-detail-04 .detail-copy h1.detail-primary-title {
+  font-size: clamp(2.4rem, 5vw, 5.8rem);
+}
+
+.category-detail-04 .detail-ensemble-cutout {
+  z-index: 2;
+  right: -2%;
+  bottom: -13%;
+  height: 108%;
+  opacity: 0.72;
+}
+
 .category-detail-02 .detail-cutout {
   right: -1%;
   bottom: -10%;
@@ -1977,6 +1993,16 @@ a:focus-visible {
   .category-detail-information .detail-copy {
     width: 90%;
     max-height: 72%;
+  }
+
+  .category-detail-04 .detail-copy {
+    width: 82%;
+  }
+
+  .category-detail-04 .detail-ensemble-cutout {
+    right: -20%;
+    bottom: -4%;
+    height: 68%;
   }
 
   .detail-copy h1.detail-primary-title {

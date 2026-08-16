@@ -635,20 +635,30 @@ export default function Home() {
                 </div>
 
                 {detailCategory ? (
-                  <img
-                    className={
-                      detailCategory.id === "04"
-                        ? "detail-background"
-                        : `detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`
-                    }
-                    src={detailCategory.detailSrc}
-                    alt={
-                      detailCategory.id === "04"
-                        ? "Figuren des Ensembles"
-                        : `Figur der Kategorie ${detailCategory.name}`
-                    }
-                    draggable={false}
-                  />
+                  <>
+                    <img
+                      className={
+                        detailCategory.id === "04"
+                          ? "detail-background"
+                          : `detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`
+                      }
+                      src={detailCategory.detailSrc}
+                      alt={
+                        detailCategory.id === "04"
+                          ? "Figuren des Ensembles"
+                          : `Figur der Kategorie ${detailCategory.name}`
+                      }
+                      draggable={false}
+                    />
+                    {detailCategory.id === "04" ? (
+                      <img
+                        className="detail-cutout detail-cutout-white detail-ensemble-cutout"
+                        src={detailCategory.closeup.src}
+                        alt={detailCategory.closeup.alt}
+                        draggable={false}
+                      />
+                    ) : null}
+                  </>
                 ) : null}
               </>
             )}
