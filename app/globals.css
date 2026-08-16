@@ -1404,7 +1404,7 @@ a:focus-visible {
 .marker-name {
   display: block;
   width: max-content;
-  max-width: 11ch;
+  max-width: 14ch;
   padding: 0.2em 0.3em 0.16em;
   overflow: visible;
   background: rgba(5, 5, 5, 0.86);
