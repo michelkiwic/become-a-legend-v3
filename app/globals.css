@@ -106,13 +106,13 @@ a:focus-visible {
 .entry-background {
   object-fit: cover;
   object-position: center;
-  transform: scale(-1.01, 1.01);
+  transform: scale(1.01);
   transition: transform 2.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .entry-screen:hover .entry-background,
 .entry-screen:focus-visible .entry-background {
-  transform: scale(-1.045, 1.045);
+  transform: scale(1.045);
 }
 
 .entry-shade {
