@@ -920,8 +920,8 @@ a:focus-visible {
 .video-wall-title {
   position: absolute;
   z-index: 2;
-  top: 3%;
-  left: 3%;
+  top: 50%;
+  left: 50%;
   margin: 0;
   padding: 0.1em 0.22em 0.13em;
   background: var(--rebel-pink);
@@ -932,7 +932,8 @@ a:focus-visible {
   letter-spacing: -0.06em;
   line-height: 0.9;
   text-transform: uppercase;
-  transform: rotate(-2deg);
+  white-space: nowrap;
+  transform: translate(-50%, -50%) rotate(-2deg);
   pointer-events: none;
 }
 
