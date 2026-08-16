@@ -70,7 +70,7 @@ const categories: Category[] = [
     id: "04",
     name: "DAS ENSEMBLE",
     point: { x: 74, y: 66.6 },
-    detailSrc: "closeup-u4-white.webp",
+    detailSrc: "ensemble-background.jpg",
     closeup: {
       src: "closeup-u4-white.webp",
       alt: "Close-up of a seated black Performer holding a pale wooden figure",
@@ -643,9 +643,17 @@ export default function Home() {
 
                 {detailCategory ? (
                   <img
-                    className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`}
+                    className={
+                      detailCategory.id === "04"
+                        ? "detail-background"
+                        : `detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`
+                    }
                     src={detailCategory.detailSrc}
-                    alt={`Figur der Kategorie ${detailCategory.name}`}
+                    alt={
+                      detailCategory.id === "04"
+                        ? "Figuren des Ensembles"
+                        : `Figur der Kategorie ${detailCategory.name}`
+                    }
                     draggable={false}
                   />
                 ) : null}
