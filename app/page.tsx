@@ -787,8 +787,12 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
-        <span>Yoshi + Moshi</span>
-        <span>Nina Staehli</span>
+        <a href="https://yoshi-moshi.com/" target="_blank" rel="noreferrer">
+          Yoshi + Moshi
+        </a>
+        <a href="https://ninastaehli.com/" target="_blank" rel="noreferrer">
+          Nina Staehli
+        </a>
       </footer>
     </main>
     </>
