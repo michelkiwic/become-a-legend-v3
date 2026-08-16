@@ -32,7 +32,7 @@ type DetailContent = {
 const categories: Category[] = [
   {
     id: "01",
-    name: "Bla-Bla-Bla",
+    name: "BLA BLAA BLAA",
     point: { x: 18.7, y: 56 },
     detailSrc: "closeup-u1-cutout.png",
     closeup: {
@@ -44,7 +44,7 @@ const categories: Category[] = [
   },
   {
     id: "02",
-    name: "Movement-Dancers",
+    name: "DANCE DOLLS",
     point: { x: 33.1, y: 57.4 },
     detailSrc: "closeup-u2-white.webp",
     closeup: {
@@ -56,7 +56,7 @@ const categories: Category[] = [
   },
   {
     id: "03",
-    name: "Big Heads",
+    name: "YOSHINI + MOSHINI",
     point: { x: 47.2, y: 71.9 },
     detailSrc: "closeup-u3-white.webp",
     closeup: {
@@ -68,7 +68,7 @@ const categories: Category[] = [
   },
   {
     id: "04",
-    name: "Performers",
+    name: "DAS ENSEMBLE",
     point: { x: 74, y: 66.6 },
     detailSrc: "closeup-u4-white.webp",
     closeup: {
@@ -84,7 +84,7 @@ const categories: Category[] = [
   },
   {
     id: "05",
-    name: "Wooden Rebels",
+    name: "DAS PUBLIKUM",
     point: { x: 61.2, y: 69.4 },
     detailSrc: "closeup-u5-white.webp",
     closeup: {
@@ -96,7 +96,7 @@ const categories: Category[] = [
   },
   {
     id: "06",
-    name: "4th Wall",
+    name: "DIE 4. WAND",
     point: { x: 61.8, y: 51.5 },
     detailSrc: "yoshi-moshi-model.jpg",
     outline:
@@ -106,7 +106,7 @@ const categories: Category[] = [
   },
   {
     id: "07",
-    name: "Videos",
+    name: "FILME + PERFORMANCES",
     point: { x: 49.2, y: 53.2 },
     detailSrc: "yoshi-moshi-model.jpg",
     outline:
@@ -608,7 +608,7 @@ export default function Home() {
                     preload="auto"
                   />
                 ))}
-                <h1 className="video-wall-title" id="category-detail-title">Videos</h1>
+                <h1 className="video-wall-title" id="category-detail-title">Filme + Performances</h1>
               </div>
             ) : (
               <>
