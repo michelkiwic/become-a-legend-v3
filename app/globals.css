@@ -1067,11 +1067,13 @@ a:focus-visible {
   user-select: none;
 }
 
-.category-detail-04 .detail-copy {
+.category-detail-04 .detail-copy,
+.category-detail-05 .detail-copy {
   width: min(52%, 640px);
 }
 
-.category-detail-04 .detail-copy h1.detail-primary-title {
+.category-detail-04 .detail-copy h1.detail-primary-title,
+.category-detail-05 .detail-copy h1.detail-primary-title {
   font-size: clamp(2.4rem, 5vw, 5.8rem);
 }
 
@@ -1995,7 +1997,8 @@ a:focus-visible {
     max-height: 72%;
   }
 
-  .category-detail-04 .detail-copy {
+  .category-detail-04 .detail-copy,
+  .category-detail-05 .detail-copy {
     width: 82%;
   }
 
