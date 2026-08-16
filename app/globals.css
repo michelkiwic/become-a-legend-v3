@@ -777,9 +777,9 @@ a:focus-visible {
   border-bottom: 0;
   grid-template-columns: 1fr;
   color: var(--paper);
-  font-size: 0.68rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.07em;
 }
 
 .instruction {

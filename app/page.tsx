@@ -129,8 +129,9 @@ const categories: Category[] = [
 ];
 
 const utilityCategories = [
-  { id: "09", name: "Legal" },
-  { id: "10", name: "Contact" },
+  { id: "09", name: "Finances", detailId: "finances" },
+  { id: "10", name: "Inventar", detailId: "inventory" },
+  { id: "11", name: "Contacts", detailId: "contacts" },
 ];
 
 const detailContent: Record<string, DetailContent> = {
@@ -554,14 +555,12 @@ export default function Home() {
               </button>
               {utilityCategories.map((category) => (
                 <a
-                  href={category.name === "Contact" ? "#model" : `#${category.name.toLowerCase()}`}
+                  href="#model"
                   key={category.id}
                   onClick={(event) => {
                     setMenuOpen(false);
-                    if (category.name === "Contact") {
-                      event.preventDefault();
-                      showDetail("contacts");
-                    }
+                    event.preventDefault();
+                    showDetail(category.detailId);
                   }}
                 >
                   <span>{category.id}</span>
