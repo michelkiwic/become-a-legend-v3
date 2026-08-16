@@ -448,8 +448,8 @@ export default function Home() {
       >
         <img
           className="entry-background"
-          src="entry-homeless-wohnwagen.webp"
-          alt="Yoshi and Moshi standing in front of a caravan in the forest"
+          src="entry-karrussel.webp"
+          alt="Yoshi and Moshi riding a colorful carousel"
           draggable={false}
         />
         <span className="entry-shade" aria-hidden="true" />
