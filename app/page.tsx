@@ -450,7 +450,7 @@ export default function Home() {
           <strong>No humor<br />= no entry</strong>
           <img src="entry-red-cross.png" alt="" draggable={false} />
         </span>
-        <span className="entry-action">Click or tap for breaking news</span>
+        <span className="entry-action">Click for breaking news</span>
       </button>
 
       <button
