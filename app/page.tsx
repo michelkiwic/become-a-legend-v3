@@ -672,9 +672,14 @@ export default function Home() {
             draggable={false}
           />
 
-          <span className="funded-button" aria-label="Fully funded">
+          <button
+            className="funded-button"
+            type="button"
+            aria-label="Fully funded – Finances öffnen"
+            onClick={() => showDetail("finances")}
+          >
             <span className="funded-button-face">Fully funded!</span>
-          </span>
+          </button>
 
           <button
             className="model-footer-action model-footer-finances"
