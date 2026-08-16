@@ -448,8 +448,8 @@ export default function Home() {
       >
         <img
           className="entry-background"
-          src="entry-no-humor.png"
-          alt="Yoshi and Moshi lying on a bed in a red room"
+          src="entry-homeless-wohnwagen.webp"
+          alt="Yoshi and Moshi standing in front of a caravan in the forest"
           draggable={false}
         />
         <span className="entry-shade" aria-hidden="true" />
