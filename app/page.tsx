@@ -71,7 +71,7 @@ const categories: Category[] = [
     id: "04",
     name: "DAS ENSEMBLE",
     point: { x: 74, y: 66.6 },
-    detailSrc: "closeup-u4-white.webp",
+    detailSrc: "closeup-u4-cutout.png",
     backgroundSrc: "ensemble-background.jpg",
     closeup: {
       src: "closeup-u4-white.webp",
@@ -648,7 +648,7 @@ export default function Home() {
                       />
                     ) : null}
                     <img
-                      className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}${detailCategory.backgroundSrc ? " detail-layered-cutout" : ""}`}
+                      className={`detail-cutout${detailCategory.id === "01" || detailCategory.id === "04" ? "" : " detail-cutout-white"}${detailCategory.backgroundSrc ? " detail-layered-cutout" : ""}`}
                       src={detailCategory.detailSrc}
                       alt={detailCategory.closeup?.alt ?? `Figur der Kategorie ${detailCategory.name}`}
                       draggable={false}
