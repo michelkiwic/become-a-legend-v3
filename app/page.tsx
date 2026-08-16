@@ -134,6 +134,11 @@ const utilityCategories = [
   { id: "11", name: "Contacts", detailId: "contacts" },
 ];
 
+const videoWallClips = Array.from(
+  { length: 12 },
+  (_, index) => `video-wall/clip-${String(index + 1).padStart(2, "0")}.webm`,
+);
+
 const detailContent: Record<string, DetailContent> = {
   "01": {
     number: "01",
@@ -588,39 +593,60 @@ export default function Home() {
               }
             }}
           >
-            <div className="detail-copy">
-              {activeDetailContent.number ? (
-                <span className="detail-number">{activeDetailContent.number}</span>
-              ) : null}
-              <p className="detail-kicker">{activeDetailContent.kicker}</p>
-              <h1 id="category-detail-title">{activeDetailContent.title}</h1>
-              <div className="detail-text">
-                {activeDetailContent.sections.map((section, sectionIndex) => (
-                  <section className="detail-text-section" key={`${detailId}-section-${sectionIndex}`}>
-                    {section.heading ? <h2>{section.heading}</h2> : null}
-                    {section.paragraphs?.map((paragraph, paragraphIndex) => (
-                      <p key={`${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>{paragraph}</p>
-                    ))}
-                    {section.items ? (
-                      <ul>
-                        {section.items.map((item) => (
-                          <li key={item}>{item}</li>
-                        ))}
-                      </ul>
-                    ) : null}
-                  </section>
+            {detailId === "07" ? (
+              <div className="video-wall" aria-label="Zwölf bewegte Yoshi und Moshi Videos">
+                {videoWallClips.map((clip, index) => (
+                  <video
+                    className="video-wall-clip"
+                    src={clip}
+                    key={clip}
+                    aria-label={`Yoshi und Moshi Video ${index + 1}`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                  />
                 ))}
+                <h1 className="video-wall-title" id="category-detail-title">Videos</h1>
               </div>
-            </div>
+            ) : (
+              <>
+                <div className="detail-copy">
+                  {activeDetailContent.number ? (
+                    <span className="detail-number">{activeDetailContent.number}</span>
+                  ) : null}
+                  <p className="detail-kicker">{activeDetailContent.kicker}</p>
+                  <h1 id="category-detail-title">{activeDetailContent.title}</h1>
+                  <div className="detail-text">
+                    {activeDetailContent.sections.map((section, sectionIndex) => (
+                      <section className="detail-text-section" key={`${detailId}-section-${sectionIndex}`}>
+                        {section.heading ? <h2>{section.heading}</h2> : null}
+                        {section.paragraphs?.map((paragraph, paragraphIndex) => (
+                          <p key={`${detailId}-paragraph-${sectionIndex}-${paragraphIndex}`}>{paragraph}</p>
+                        ))}
+                        {section.items ? (
+                          <ul>
+                            {section.items.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </section>
+                    ))}
+                  </div>
+                </div>
 
-            {detailCategory ? (
-              <img
-                className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`}
-                src={detailCategory.detailSrc}
-                alt={`Figur der Kategorie ${detailCategory.name}`}
-                draggable={false}
-              />
-            ) : null}
+                {detailCategory ? (
+                  <img
+                    className={`detail-cutout${detailCategory.id === "01" ? "" : " detail-cutout-white"}`}
+                    src={detailCategory.detailSrc}
+                    alt={`Figur der Kategorie ${detailCategory.name}`}
+                    draggable={false}
+                  />
+                ) : null}
+              </>
+            )}
 
             <button
               className="detail-back"
